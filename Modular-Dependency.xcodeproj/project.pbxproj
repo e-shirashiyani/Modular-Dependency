@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		B87848552B8B20B100825BDB /* Modular_DependencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87848542B8B20B100825BDB /* Modular_DependencyTests.swift */; };
 		B878485F2B8B20B100825BDB /* Modular_DependencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878485E2B8B20B100825BDB /* Modular_DependencyUITests.swift */; };
 		B87848612B8B20B100825BDB /* Modular_DependencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87848602B8B20B100825BDB /* Modular_DependencyUITestsLaunchTests.swift */; };
+		B87848702B8B24C200825BDB /* CommonModule in Frameworks */ = {isa = PBXBuildFile; productRef = B878486F2B8B24C200825BDB /* CommonModule */; };
+		B87848732B8B252700825BDB /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = B87848722B8B252700825BDB /* HomeModule */; };
+		B87848762B8B256400825BDB /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = B87848752B8B256400825BDB /* LoginModule */; };
+		B87848792B8B257000825BDB /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B87848782B8B257000825BDB /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87848762B8B256400825BDB /* LoginModule in Frameworks */,
+				B87848702B8B24C200825BDB /* CommonModule in Frameworks */,
+				B87848732B8B252700825BDB /* HomeModule in Frameworks */,
+				B87848792B8B257000825BDB /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,7 @@
 				B87848532B8B20B100825BDB /* Modular-DependencyTests */,
 				B878485D2B8B20B100825BDB /* Modular-DependencyUITests */,
 				B878483B2B8B20AC00825BDB /* Products */,
+				B87848772B8B257000825BDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +136,13 @@
 			path = "Modular-DependencyUITests";
 			sourceTree = "<group>";
 		};
+		B87848772B8B257000825BDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +159,12 @@
 			dependencies = (
 			);
 			name = "Modular-Dependency";
+			packageProductDependencies = (
+				B878486F2B8B24C200825BDB /* CommonModule */,
+				B87848722B8B252700825BDB /* HomeModule */,
+				B87848752B8B256400825BDB /* LoginModule */,
+				B87848782B8B257000825BDB /* Swinject */,
+			);
 			productName = "Modular-Dependency";
 			productReference = B878483A2B8B20AC00825BDB /* Modular-Dependency.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,12 @@
 				Base,
 			);
 			mainGroup = B87848312B8B20AC00825BDB;
+			packageReferences = (
+				B878486D2B8B23CB00825BDB /* XCRemoteSwiftPackageReference "Swinject" */,
+				B878486E2B8B24C200825BDB /* XCLocalSwiftPackageReference "../CommonModule" */,
+				B87848712B8B252700825BDB /* XCLocalSwiftPackageReference "../HomeModule" */,
+				B87848742B8B256400825BDB /* XCLocalSwiftPackageReference "../LoginModule" */,
+			);
 			productRefGroup = B878483B2B8B20AC00825BDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -607,6 +635,52 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B878486E2B8B24C200825BDB /* XCLocalSwiftPackageReference "../CommonModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../CommonModule;
+		};
+		B87848712B8B252700825BDB /* XCLocalSwiftPackageReference "../HomeModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../HomeModule;
+		};
+		B87848742B8B256400825BDB /* XCLocalSwiftPackageReference "../LoginModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../LoginModule;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B878486D2B8B23CB00825BDB /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B878486F2B8B24C200825BDB /* CommonModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonModule;
+		};
+		B87848722B8B252700825BDB /* HomeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeModule;
+		};
+		B87848752B8B256400825BDB /* LoginModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoginModule;
+		};
+		B87848782B8B257000825BDB /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B878486D2B8B23CB00825BDB /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B87848322B8B20AC00825BDB /* Project object */;
 }
